@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
  <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Login</title>
-<script src="js/jquery.min.js" type="text/javascript"></script>
+<!--<script src="js/jquery.min.js" type="text/javascript"></script>-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <link href="bootstrap/bootstrap.min.css" rel="stylesheet"/>    
 <link href="bootstrap/bootstrap-theme.css" rel="stylesheet"/>
@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="css/style.css">
 <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
 <script>
-    // Initialize Firebase
+// Initialize Firebase
     var config = {
         apiKey: "AIzaSyCrOgKbLLquj52VJ3IsmTa0ltWcXN9MXPo",
         authDomain: "usuarios-c6678.firebaseapp.com",
@@ -23,8 +23,8 @@
         storageBucket: "usuarios-c6678.appspot.com",
         messagingSenderId: "719932591775"
     };
-    firebase.initializeApp(config);
-    </script>
+    firebase.initializeApp(config);</script>
+
 </head>
 <body>
         <div class="container formulario animated slideInLeft ">
@@ -54,7 +54,11 @@
                         </div>
                         <br>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary center-block" onclick="ingresar()">Ingresar</button>
+                            <button onclick="ingresar()" type="submit" class="btn btn-primary center-block">Ingresar</button>
+                            <!--<button id="btnlogout" class="btn btn-action hide">Cerrar Sesión</button>-->
+                        </div>
+                        <div class="form-group">
+                            
                         </div>
                     </form>
                 </fieldset>
@@ -67,6 +71,6 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-        <script src="js/app.js"></script>
+        <script src="app.js"></script>
 </body>
 </html>

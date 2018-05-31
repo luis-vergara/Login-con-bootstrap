@@ -1,3 +1,46 @@
+/*(function(){
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCrOgKbLLquj52VJ3IsmTa0ltWcXN9MXPo",
+        authDomain: "usuarios-c6678.firebaseapp.com",
+        databaseURL: "https://usuarios-c6678.firebaseio.com",
+        projectId: "usuarios-c6678",
+        storageBucket: "usuarios-c6678.appspot.com",
+        messagingSenderId: "719932591775"
+    };
+    firebase.initializeApp(config);
+    const usuario = document.getElementById('usuario');
+    const contrasena = document.getElementById('contrasena');
+    const btnlogin = document.getElementById('btnlogin');
+    const btnlogout = document.getElementById('btnlogout');
+
+    //Añadir Evento login
+    btnlogin.addEventListener('click', e =>{
+        //Obtener email y pass
+        const email = usuario.value;
+        const pass = contrasena.value;
+        const auth = firebase.auth();
+        //Sign in
+        const promise = auth.signInWithEmailAndPassword(email, pass);
+        promise.catch(e => console.log(e.message));   
+    });
+    btnlogout.addEventListener('click', e =>{
+        firebase.auth().signOut();
+    });
+    // Añadir un listener en tiempo real
+    firebase.auth().onAuthStateChanged(firebaseUser =>{
+        if(firebaseUser){
+            console.log(firebaseUser);
+            btnlogout.classList.remove('hide');
+        }else{
+            console.log('no logueado');
+            //btnlogout.classList.add('hide');
+        }
+        
+    });
+});*/
+
+
 function ingresar(){
     var email = document.getElementById('usuario').value;
     var contrasena = document.getElementById('contrasena').value;
